@@ -1,7 +1,3 @@
-# Integrations Project
-
-This project provides a unified interface for integrating with various third-party services including Hubspot, Airtable, and Notion. It consists of a React frontend and a FastAPI backend.
-
 ## Hubspot Integration
 
 The project includes a comprehensive Hubspot CRM integration that allows:
