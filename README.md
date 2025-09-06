@@ -10,17 +10,11 @@ The project includes a comprehensive Hubspot CRM integration that allows:
 ### Hubspot Configuration
 
 1. Hubspot API Setup:
-   - Client ID: `186e9160-76fd-4466-880c-a470f7923395`
+   - Client ID: 'Your Client ID'
    - Redirect URI: `http://localhost:8000/integrations/hubspot/oauth2callback`
    - Required Scopes: `oauth crm.objects.contacts.read`
 
-2. Frontend Features:
-   - Material-UI based interface
-   - Real-time connection status
-   - Popup OAuth flow
-   - Automatic credential management
-
-3. Backend Endpoints:
+2. Backend Endpoints:
    ```
    POST /integrations/hubspot/authorize
    - Purpose: Initiate OAuth flow
@@ -43,24 +37,6 @@ The project includes a comprehensive Hubspot CRM integration that allows:
    - Returns: Hubspot items
    ```
 
-## Project Structure
-
-```
-├── backend/
-│   ├── main.py              # FastAPI main application
-│   ├── redis_client.py      # Redis client for caching
-│   ├── requirements.txt     # Python dependencies
-│   └── integrations/        # Integration implementations
-│       ├── airtable.py
-│       ├── hubspot.py
-│       └── notion.py
-└── frontend/
-    ├── src/
-    │   ├── App.js          # Main React application
-    │   ├── data-form.js    # Data form components
-    │   └── integrations/   # Integration-specific components
-    └── public/             # Static assets
-```
 
 ## Backend Setup
 
@@ -79,8 +55,6 @@ The project includes a comprehensive Hubspot CRM integration that allows:
    uvicorn main:app --reload
    ```
 
-The backend server will run on `http://localhost:8000`
-
 ## Frontend Setup
 
 1. Navigate to the frontend directory:
@@ -98,43 +72,6 @@ The backend server will run on `http://localhost:8000`
    npm start
    ```
 
-The React application will run on `http://localhost:3000`
-
-## Features
-
-### Hubspot Features
-- Full OAuth2 authentication flow with secure state management
-- Contact data retrieval and management
-- Real-time connection status monitoring
-- Automatic token refresh handling
-- Secure credential storage in Redis
-- Organization and user-level isolation
-- Material-UI based integration interface
-
-### General Features
-- Multi-platform OAuth2 integration (Hubspot, Airtable, Notion)
-- Data synchronization between platforms
-- Redis caching for improved performance
-- Cross-Origin Resource Sharing (CORS) enabled
-- User and organization-based authentication
-- Error handling and user feedback
-- Secure credential management
-
-## API Endpoints
-
-### Airtable
-- POST `/integrations/airtable/authorize` - Initiate OAuth flow
-- GET `/integrations/airtable/oauth2callback` - OAuth callback
-- POST `/integrations/airtable/credentials` - Get credentials
-- POST `/integrations/airtable/load` - Load items
-
-### Notion
-- POST `/integrations/notion/authorize` - Initiate OAuth flow
-- GET `/integrations/notion/oauth2callback` - OAuth callback
-
-### Hubspot
-- Similar endpoints for Hubspot integration
-
 ## Development
 
 The project uses:
@@ -143,11 +80,4 @@ The project uses:
 - Redis for caching
 - OAuth2 for authentication
 
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a new Pull Request
 
